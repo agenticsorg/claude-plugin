@@ -1,0 +1,9 @@
+{
+  "name": "agentics-tutorials",
+  "description": "Step-by-step tutorials for the Agentics community: getting started, building agents, MCP integration, and more.",
+  "version": "0.1.0",
+  "author": { "name": "Agentics Foundation", "url": "https://agentics.org" },
+  "homepage": "https://agentics.org",
+  "license": "MIT",
+  "keywords": ["agentics", "tutorial", "education", "learning"]
+}

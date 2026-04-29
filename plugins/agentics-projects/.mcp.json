@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "agentics-projects": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server.js"],
+      "env": {
+        "AGENTICS_BASE_URL": "https://agentics.org",
+        "GITHUB_ORG": "agenticsorg"
+      }
+    }
+  }
+}

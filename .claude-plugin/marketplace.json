@@ -9,7 +9,37 @@
     {
       "name": "agentics-org",
       "source": "./plugins/agentics-org",
-      "description": "MCP access to agentics.org — fetch pages, search content, list routes, and read sections as resources. Includes /agentics command, agentics-content skill, and agentics-researcher agent."
+      "description": "MCP access to agentics.org — fetch pages, search content, list routes, read sections as resources."
+    },
+    {
+      "name": "agentics-tutorials",
+      "source": "./plugins/agentics-tutorials",
+      "description": "Step-by-step tutorials: getting started, building agents, MCP integration. Skill-based, no server."
+    },
+    {
+      "name": "agentics-onboarding",
+      "source": "./plugins/agentics-onboarding",
+      "description": "Guided onboarding for new members: signup → community → first project → first event."
+    },
+    {
+      "name": "agentics-glossary",
+      "source": "./plugins/agentics-glossary",
+      "description": "Glossary of Agentics, MCP, and agentic AI terms with /glossary lookup."
+    },
+    {
+      "name": "agentics-events",
+      "source": "./plugins/agentics-events",
+      "description": "MCP access to Agentics events via the Luma API. List, search, fetch event details."
+    },
+    {
+      "name": "agentics-blog",
+      "source": "./plugins/agentics-blog",
+      "description": "MCP access to the Agentics blog (RSS-first, sitemap fallback). List, search, summarize posts."
+    },
+    {
+      "name": "agentics-projects",
+      "source": "./plugins/agentics-projects",
+      "description": "MCP access to Agentics projects: agenticsorg GitHub org repos plus the agentics.org/partners page."
     }
   ]
 }

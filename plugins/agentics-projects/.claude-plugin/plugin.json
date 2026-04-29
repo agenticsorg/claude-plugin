@@ -1,0 +1,9 @@
+{
+  "name": "agentics-projects",
+  "description": "MCP access to Agentics projects and partners. Lists agentics.org/partners, cross-references the agenticsorg GitHub org, and fetches repo metadata.",
+  "version": "0.1.0",
+  "author": { "name": "Agentics Foundation", "url": "https://agentics.org" },
+  "homepage": "https://agentics.org/partners",
+  "license": "MIT",
+  "keywords": ["agentics", "projects", "partners", "github", "mcp"]
+}

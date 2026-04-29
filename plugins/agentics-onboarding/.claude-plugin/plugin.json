@@ -1,0 +1,9 @@
+{
+  "name": "agentics-onboarding",
+  "description": "Guided onboarding flow for new Agentics members: signup → community → first project.",
+  "version": "0.1.0",
+  "author": { "name": "Agentics Foundation", "url": "https://agentics.org" },
+  "homepage": "https://agentics.org",
+  "license": "MIT",
+  "keywords": ["agentics", "onboarding", "membership"]
+}

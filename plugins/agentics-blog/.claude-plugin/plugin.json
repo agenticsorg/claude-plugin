@@ -1,0 +1,9 @@
+{
+  "name": "agentics-blog",
+  "description": "MCP access to the Agentics blog via RSS/sitemap. List recent posts, search by topic, fetch a post.",
+  "version": "0.1.0",
+  "author": { "name": "Agentics Foundation", "url": "https://agentics.org" },
+  "homepage": "https://agentics.org/blog",
+  "license": "MIT",
+  "keywords": ["agentics", "blog", "rss", "mcp"]
+}

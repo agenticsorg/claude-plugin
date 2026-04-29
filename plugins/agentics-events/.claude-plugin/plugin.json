@@ -1,0 +1,9 @@
+{
+  "name": "agentics-events",
+  "description": "MCP access to Agentics events via the Luma API. List upcoming events, search by topic, fetch event details. Falls back to agentics.org/events when no API key is configured.",
+  "version": "0.1.0",
+  "author": { "name": "Agentics Foundation", "url": "https://agentics.org" },
+  "homepage": "https://agentics.org/events",
+  "license": "MIT",
+  "keywords": ["agentics", "events", "luma", "mcp", "calendar"]
+}
