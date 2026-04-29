@@ -1,0 +1,19 @@
+{
+  "name": "agentics-org",
+  "description": "MCP access to agentics.org — fetch pages, search content, list routes, and read site sections as resources",
+  "version": "0.1.0",
+  "author": {
+    "name": "rUv",
+    "url": "https://github.com/ruvnet"
+  },
+  "homepage": "https://agentics.org",
+  "license": "MIT",
+  "keywords": [
+    "agentics",
+    "mcp",
+    "website",
+    "fetch",
+    "search",
+    "content"
+  ]
+}
