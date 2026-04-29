@@ -1,0 +1,15 @@
+{
+  "name": "agenticsorg",
+  "description": "Agentics Foundation marketplace — Claude Code plugins for the Agentics community, MCP integrations, and agentics.org tooling.",
+  "owner": {
+    "name": "Agentics Foundation",
+    "url": "https://github.com/agenticsorg"
+  },
+  "plugins": [
+    {
+      "name": "agentics-org",
+      "source": "./plugins/agentics-org",
+      "description": "MCP access to agentics.org — fetch pages, search content, list routes, and read sections as resources. Includes /agentics command, agentics-content skill, and agentics-researcher agent."
+    }
+  ]
+}

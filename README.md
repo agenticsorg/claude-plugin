@@ -1,66 +1,49 @@
-# agentics-org
+# agenticsorg/claude-plugin
 
-MCP plugin for Claude Code that exposes the public **agentics.org** website to agents.
-
-## What you get
-
-- **MCP server** (`agentics-org`) with three tools:
-  - `fetch_page(path)` — fetch a page, return stripped text
-  - `search_content(query)` — substring search across known pages
-  - `list_pages()` — list routes (sitemap.xml or curated fallback)
-- **MCP resources** — `agentics://home`, `agentics://about`, `agentics://community`, etc.
-- **MCP prompts** — `summarize-section`, `answer-from-site`
-- **Slash command** — `/agentics list|fetch|search|summarize|ask`
-- **Skill** — `agentics-content` (auto-loaded when site content is relevant)
-- **Agent** — `agentics-researcher` (Sonnet, for grounded research/summaries)
+Claude Code marketplace for the Agentics Foundation.
 
 ## Install
 
-This plugin lives in `plugins/agentics-org/` of the agentics workspace.
-
 ```bash
-# from the workspace root
-claude --plugin-dir ./plugins/agentics-org
+claude /plugin marketplace add agenticsorg/claude-plugin
+claude /plugin install agentics-org@agenticsorg
 ```
 
-The MCP server is wired through `.mcp.json` and starts automatically.
+## Plugins in this marketplace
 
-### Dependencies
+| Plugin | Description |
+|--------|-------------|
+| [`agentics-org`](./plugins/agentics-org) | MCP access to agentics.org — fetch pages, search content, list routes, read sections as resources. Ships `/agentics` command, `agentics-content` skill, and `agentics-researcher` agent. |
 
-The server uses `@modelcontextprotocol/sdk`. Install once:
+## Layout
 
-```bash
-cd plugins/agentics-org && npm install
+```
+.
+├── .claude-plugin/
+│   └── marketplace.json       # marketplace manifest
+├── plugins/
+│   └── agentics-org/          # individual plugin
+│       ├── .claude-plugin/plugin.json
+│       ├── .mcp.json
+│       ├── server.js          # MCP server (Node 18+)
+│       ├── package.json
+│       ├── skills/agentics-content/SKILL.md
+│       ├── commands/agentics.md
+│       ├── agents/agentics-researcher.md
+│       └── README.md
+└── README.md
 ```
 
-Node 18+ required.
-
-## Configuration
-
-Override the base URL via env in `.mcp.json` if you want to point at a staging
-host (e.g. the v2 Cloud Run URL):
-
-```json
-{
-  "mcpServers": {
-    "agentics-org": {
-      "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/server.js"],
-      "env": { "AGENTICS_BASE_URL": "https://agentics-org-v2-667037737667.us-central1.run.app" }
-    }
-  }
-}
-```
-
-## Caveats
-
-`agentics.org` is a React SPA — JS-rendered content isn't visible to a raw HTTP fetch. The server returns the SSR shell, `<title>`, meta description, and any pre-rendered text, which covers navigation and SEO content but not dynamic dashboards. For full client-rendered output, layer a headless browser on top.
-
-## Test
+## Local testing
 
 ```bash
-claude --plugin-dir ./plugins/agentics-org
+git clone https://github.com/agenticsorg/claude-plugin
+cd claude-plugin/plugins/agentics-org
+npm install
+claude --plugin-dir .
 > /agentics list
-> /agentics fetch /about
-> /agentics search community
 ```
+
+## License
+
+MIT
